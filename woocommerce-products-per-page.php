@@ -47,10 +47,11 @@ class woocommerce_products_per_page {
 		
 		// Add filter to products per page displayed
 		add_filter( "loop_shop_per_page", array( $this, "wppp_products_per_page_hook" ) );
-		
+		// Add filter for product columns
 		add_filter( "loop_shop_columns", array( $this, "wppp_shop_columns_hook" ) );
-		
+		// Enqueue some scripts
 		add_action( "wp_enqueue_scripts", array( $this, "wppp_enqueue_scripts" ) );
+		
 	}
 	
 	/* 	wppp_hook_locations()

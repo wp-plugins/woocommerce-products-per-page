@@ -10,7 +10,13 @@ License URI: http://www.gnu.org/licenses/gpl-3.0.html
 WooCommerce Products Per Page is a easy-to-setup plugin that integrates a 'products per page' dropdown on your WooCommerce pages.
 
 == Description ==
-WooCommerce Products Per Page dropdown is easy to install and has several other product page configurations. 
+WooCommerce Products Per Page dropdown is easy to install and has several other product page configurations. When activated the plugin already works and has multiple settings you can set to your desire.
+
+Options like: 
+1. Dropdown position (top, bottom, top and bottom)
+2. List op options products per page to show to your visitors
+3. Default number of products per page
+4. Columns per page
 
 **See screenshots for the best picture**
 
@@ -29,6 +35,9 @@ WooCommerce Products Per Page dropdown is easy to install and has several other 
 
 
 == Changelog ==
+
+= 1.0.1 =
+* Small update for cookies
 
 = 1.0.0 =
 * Initial release
