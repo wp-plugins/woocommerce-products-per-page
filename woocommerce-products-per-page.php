@@ -48,6 +48,8 @@ class woocommerce_products_per_page {
 		// Add filter to products per page displayed
 		add_filter( "loop_shop_per_page", array( $this, "wppp_products_per_page_hook" ) );
 		
+		add_filter( "loop_shop_columns", array( $this, "wppp_shop_columns_hook" ) );
+		
 		add_action( "wp_enqueue_scripts", array( $this, "wppp_enqueue_scripts" ) );
 	}
 	
@@ -76,7 +78,7 @@ class woocommerce_products_per_page {
 	public function wppp_submit_intercept() {
 		
 		if ( isset( $_POST["wppp_ppp"] ) ) 
-			setcookie( "products_per_page", $_POST["wppp_ppp"], time()+(3600*24*3) );
+			setcookie( "products_per_page", $_POST["wppp_ppp"], time()+(3600*24*3), "/" );
 		
 	}
 	
@@ -91,6 +93,16 @@ class woocommerce_products_per_page {
 			return $this->options["default_ppp"];
 
 	}	
+	
+	public function wppp_shop_columns_hook( $columns ) {
+
+		$settings = get_option( "wppp_settings" );		
+		if( $settings && $settings["shop_columns"] > 0 )
+			$columns = $settings["shop_columns"];
+		
+		return $columns;
+		
+	}
 	
 	
 	/* 	wppp_add_options_menu()
