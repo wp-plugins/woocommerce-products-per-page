@@ -3,7 +3,7 @@ Contributors: sormano
 Tags: Products per page, woocommerce, woocommerce products, woocommerce products per page, woocommerce displayed products, woocommerce quantity products, woocommerce amount of products, woocommerce number of products, woocommerce shown products
 Requires at least: 3.0.1
 Tested up to: 3.8.1
-Stable tag: 1.0.1
+Stable tag: 1.1
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -36,7 +36,7 @@ Options like:
 
 == Changelog ==
 
-= 1.0.1 =
+= 1.1 =
 * Small update for cookies
 
 = 1.0.0 =
