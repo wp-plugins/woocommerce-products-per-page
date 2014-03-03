@@ -3,7 +3,7 @@
 Plugin Name: Woocomerce Products Per Page
 Plugin URI: http://www.jeroensormani.nl/
 Description: Integrate a 'products per page' dropdown on your WooCommerce website! Set-up in <strong>seconds</strong>!
-Version: 1.0
+Version: 1.0.1
 Author: Jeroen Sormani
 Author URI: http://www.jeroensormani.nl
 
@@ -47,10 +47,11 @@ class woocommerce_products_per_page {
 		
 		// Add filter to products per page displayed
 		add_filter( "loop_shop_per_page", array( $this, "wppp_products_per_page_hook" ) );
-		
+		// Add filter for product columns
 		add_filter( "loop_shop_columns", array( $this, "wppp_shop_columns_hook" ) );
-		
+		// Enqueue some scripts
 		add_action( "wp_enqueue_scripts", array( $this, "wppp_enqueue_scripts" ) );
+		
 	}
 	
 	/* 	wppp_hook_locations()
