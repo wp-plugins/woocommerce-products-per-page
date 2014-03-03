@@ -24,7 +24,7 @@ WooCommerce Products Per Page dropdown is easy to install and has several other 
 == Screenshots ==
 
 1. Dropdown box on the products page
-2. Close up of the dropdown box
+2. Close-up of the dropdown box
 3. Settings page
 
 
