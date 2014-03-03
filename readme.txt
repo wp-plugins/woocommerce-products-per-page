@@ -13,8 +13,9 @@ WooCommerce Products Per Page is a easy-to-setup plugin that integrates a 'produ
 WooCommerce Products Per Page dropdown is easy to install and has several other product page configurations. When activated the plugin already works and has multiple settings you can set to your desire.
 
 Options like: 
-  - Dropdown position (top or bottom, top and bottom)
-  - List op options products per page to show to your visitors
+
+* Dropdown position (top or bottom, top and bottom)
+* List op options products per page to show to your visitors
   - Default number of products per page
   - Columns per page
 
