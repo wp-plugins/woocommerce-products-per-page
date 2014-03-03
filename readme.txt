@@ -16,8 +16,8 @@ Options like:
 
 * Dropdown position (top or bottom, top and bottom)
 * List op options products per page to show to your visitors
-  - Default number of products per page
-  - Columns per page
+* Default number of products per page
+* Columns per page
 
 **Look at the screenshots!**
 
