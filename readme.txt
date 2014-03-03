@@ -18,7 +18,7 @@ Options like:
 * Default number of products per page
 * Columns per page
 
-**See screenshots for the best picture**
+**Look at the screenshots!**
 
 
 == Installation ==
