@@ -1,6 +1,6 @@
 === WooCommerce Products Per Page ===
 Contributors: sormano
-Tags: Products per page, woocommerce, woocommerce products, woocommerce products per page, woocommerce displayed products, woocommerce quantity products, woocommerce amount of products, woocommerce number of products, woocommerce shown products
+Tags: Products per page, woocommerce, woocommerce products, woocommerce products per page, woocommerce displayed products, woocommerce quantity products, woocommerce amount of products, woocommerce number of products, woocommerce shown products, woocommerce columns
 Requires at least: 3.0.1
 Tested up to: 3.8.1
 Stable tag: 1.0.1
