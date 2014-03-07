@@ -1,6 +1,6 @@
 <?PHP
 /*
-Plugin Name: Woocomerce Products Per Page
+Plugin Name: Woocommerce Products Per Page
 Plugin URI: http://www.jeroensormani.nl/
 Description: Integrate a 'products per page' dropdown on your WooCommerce website! Set-up in <strong>seconds</strong>!
 Version: 1.0.1
