@@ -32,7 +32,7 @@ class wppp_options extends woocommerce_products_per_page {
 		// 3. Add settings section
 		add_settings_section(
 			"wppp_settings",				 					// ID of section
-			__( "WooCommerce Products Per Page", "wppp" ), 		// Page title
+			"WooCommerce Products Per Page",			 		// Page title
 			array( $this, "wppp_section_callback" ),			// Callback for page description
 			"wppp_settings"										// Page to display settings
 		);
@@ -103,6 +103,7 @@ class wppp_options extends woocommerce_products_per_page {
 			<option value="top" <?php selected( $this->options["location"], "top" ); ?>><?php _e( "Top", "wppp" ); ?></option>
 			<option value="bottom" <?php selected( $this->options["location"], "bottom" ); ?>><?php _e( "Bottom", "wppp" ); ?></option>
 			<option value="topbottom" <?php selected( $this->options["location"], "topbottom" ); ?>><?php _e( "Top/Bottom", "wppp" ); ?></option>
+			<option value="none" <?php selected( $this->options["location"], "none" ); ?>><?php _e( "None", "wppp" ); ?></option>
 		</select>
 		<?php
 		
@@ -114,7 +115,7 @@ class wppp_options extends woocommerce_products_per_page {
 		?>
 		<label for="productsPerPage">
 			<input type="text" id="productsPerPage" name="wppp_settings[productsPerPage]" value="<?php echo $this->options["productsPerPage"]; ?>">
-		<?php _e( "Seperated by spaces <em>(-1 for all products</em>)", "wppp" ); ?></label>
+		<?php _e( "Seperated by spaces <em>(-1 for all products)</em>", "wppp" ); ?></label>
 		<?php
 		
 	}
@@ -144,7 +145,7 @@ class wppp_options extends woocommerce_products_per_page {
 	
 	public function wppp_section_callback() {
 		
-		echo __( "Configure the Wordpress Product Per Page settings here.", "wppp" );
+		echo __( "Configure the WooCommerce Product Per Page settings here.", "wppp" );
 		
 	}
 		

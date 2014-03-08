@@ -28,11 +28,12 @@ class wppp_dropdown extends woocommerce_products_per_page {
 			<select name="wppp_ppp" onchange="this.form.submit()" class="select wppp-select">
 			
 				<?php
+				global $woocommerce;
 				foreach( $this->productsPerPage as $key => $value ) :
-					$selectedMatch = isset( $_POST["wppp_ppp"] ) ? $_POST["wppp_ppp"] : $_COOKIE["products_per_page"];
+					$selectedMatch = isset( $_POST["wppp_ppp"] ) ? $_POST["wppp_ppp"] : $woocommerce->session->get( "products_per_page" );
 					?>
 					<option value="<?php echo $value; ?>" <?php selected( $value, $selectedMatch ); ?>>
-						<?php printf( __( "%s products per page", "wppp" ), $value==-1?"All" : $value ) ?>
+						<?php printf( __( "%s products per page", "wppp" ), $value==-1?__( "All", "wppp" ) : $value ) ?>
 					</option>
 					<?php
 				endforeach;

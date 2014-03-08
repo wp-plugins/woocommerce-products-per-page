@@ -3,7 +3,7 @@
 Plugin Name: Woocommerce Products Per Page
 Plugin URI: http://www.jeroensormani.nl/
 Description: Integrate a 'products per page' dropdown on your WooCommerce website! Set-up in <strong>seconds</strong>!
-Version: 1.0.1
+Version: 1.0.2
 Author: Jeroen Sormani
 Author URI: http://www.jeroensormani.nl
 
@@ -46,11 +46,13 @@ class woocommerce_products_per_page {
 		add_action( "init", array( $this, "wppp_submit_intercept" ) );
 		
 		// Add filter to products per page displayed
-		add_filter( "loop_shop_per_page", array( $this, "wppp_products_per_page_hook" ) );
+		add_filter( "loop_shop_per_page", array( $this, "wppp_products_per_page_hook" ), 90 );
 		// Add filter for product columns
 		add_filter( "loop_shop_columns", array( $this, "wppp_shop_columns_hook" ) );
 		// Enqueue some scripts
 		add_action( "wp_enqueue_scripts", array( $this, "wppp_enqueue_scripts" ) );
+		// Load textdomain
+		load_plugin_textdomain( "wppp", false, basename( dirname( __FILE__ ) ) . '/languages' );
 		
 	}
 	
@@ -64,7 +66,7 @@ class woocommerce_products_per_page {
 			add_action( "woocommerce_before_shop_loop", array( $this, "wppp_dropdown_object" ) );
 		elseif( $this->options["location"] == "bottom" ) :
 			add_action( "woocommerce_after_shop_loop", array( $this, "wppp_dropdown_object" ) );
-		else :
+		elseif( $this->options["location"] == "topbottom" ):
 			add_action( "woocommerce_before_shop_loop", array( $this, "wppp_dropdown_object" ) );
 			add_action( "woocommerce_after_shop_loop", array( $this, "wppp_dropdown_object" ) );
 		endif;
@@ -78,18 +80,24 @@ class woocommerce_products_per_page {
 	*/	
 	public function wppp_submit_intercept() {
 		
-		if ( isset( $_POST["wppp_ppp"] ) ) 
-			setcookie( "products_per_page", $_POST["wppp_ppp"], time()+(3600*24*3), "/" );
+		global $woocommerce;
+		
+		if ( isset( $_POST["wppp_ppp"] ) ) {
+			$woocommerce->session->set( "products_per_page", $_POST["wppp_ppp"] );
+			$woocommerce->session->set_customer_session_cookie( true );
+		}
 		
 	}
 	
 	
 	public function wppp_products_per_page_hook() {
+		
+		global $woocommerce;
 
 		if( isset( $_POST["wppp_ppp"] ) ) 
 			return $_POST["wppp_ppp"];
-		elseif( isset( $_COOKIE["products_per_page"] ) )
-			return $_COOKIE["products_per_page"];
+		elseif( $woocommerce->session->__isset( "products_per_page" ) )
+			return $woocommerce->session->__get( "products_per_page" );
 		else 
 			return $this->options["default_ppp"];
 
@@ -131,7 +139,7 @@ class woocommerce_products_per_page {
 	*/
 	public function wppp_options_page() {
 		
-		require_once "views/options-page.php";
+		require_once plugin_dir_path( __FILE__ ) . "views/options-page.php";
 		new wppp_options();
 		
 	}
@@ -143,7 +151,7 @@ class woocommerce_products_per_page {
 	*/	
 	public function wppp_dropdown_object() {
 		
-		require_once "objects/wppp-dropdown.php";
+		require_once plugin_dir_path( __FILE__ ) . "objects/wppp-dropdown.php";
 		new wppp_dropdown();
 		
 	}
