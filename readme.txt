@@ -41,7 +41,7 @@ Options like:
 
 == Changelog ==
 
-= 1.0.5 =
+= 1.0.5/1.0.6 =
 * Added French translation (thanks to [whoaloic](http://profiles.wordpress.org/whoaloic))
 * Fixed WooCommerce 2.0.X compatibily
 * Now is capable for WooCommerce 2.0.X and 2.1.X
