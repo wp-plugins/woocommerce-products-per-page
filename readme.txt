@@ -42,23 +42,23 @@ Options like:
 == Changelog ==
 
 = 1.0.5 =
-* - Added French translation (thanks to [whoaloic](http://profiles.wordpress.org/whoaloic))
-* - Fixed WooCommerce 2.0.X compatibily
-* - Now is capable for WooCommerce 2.0.X and 2.1.X
+* Added French translation (thanks to [whoaloic](http://profiles.wordpress.org/whoaloic))
+* Fixed WooCommerce 2.0.X compatibily
+* Now is capable for WooCommerce 2.0.X and 2.1.X
 
 = 1.0.4 =
-* - Added option to control behaviour of select*
-* - Added filter on option text*
-* - Improved coding to Wordpress coding standards
+* Added option to control behaviour of select*
+* Added filter on option text*
+* Improved coding to Wordpress coding standards
 
 = 1.0.3 =
-* - Fixed dutch translation*
+* Fixed dutch translation*
 
 = 1.0.2 =
-* - Added Dutch translation*
-* - Added 'None' to the dropdown locations*
-* - Now uses WC sessions instead of cookies*
-* - Gave higher priority to hook "loop_shop_per_page"*
+* Added Dutch translation*
+* Added 'None' to the dropdown locations*
+* Now uses WC sessions instead of cookies*
+* Gave higher priority to hook "loop_shop_per_page"*
 
 = 1.0.1 =
 * Small update for cookies
