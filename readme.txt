@@ -3,7 +3,7 @@ Contributors: sormano
 Tags: Products per page, woocommerce, woocommerce products, woocommerce products per page, woocommerce displayed products, woocommerce quantity products, woocommerce amount of products, woocommerce number of products, woocommerce shown products
 Requires at least: 3.0.1
 Tested up to: 3.8.1
-Stable tag: 1.0.4
+Stable tag: 1.0.5
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -23,6 +23,7 @@ Options like:
 
 ### Translations ###
 - Dutch
+- French [whoaloic](http://profiles.wordpress.org/whoaloic)
 
 
 == Installation ==
@@ -39,6 +40,11 @@ Options like:
 
 
 == Changelog ==
+
+= 1.0.5 =
+* - Added French translation (thanks to [whoaloic](http://profiles.wordpress.org/whoaloic))
+* - Fixed WooCommerce 2.0.X compatibily
+* - Now is capable for WooCommerce 2.0.X and 2.1.X
 
 = 1.0.4 =
 * - Added option to control behaviour of select*
