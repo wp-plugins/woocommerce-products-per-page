@@ -25,13 +25,15 @@ class wppp_dropdown extends woocommerce_products_per_page {
 		$cat = $wp_query->get_queried_object();
 		
 		// Set action url if option behaviour is true
+		// Paste QUERY string after for filter and orderby support
 		if ( true == $cat->term_id && true == $this->options['behaviour'] ) :
-			$action = ' action="' . get_term_link( $cat->term_id, 'product_cat' ) . '"';
+			$action = ' action="' . get_term_link( $cat->term_id, 'product_cat' ) . '?' . $_SERVER['QUERY_STRING'] . '"';
 		elseif ( true == $this->options['behaviour'] ) :
-			$action = 'action="' . get_permalink( woocommerce_get_page_id( 'shop' ) ) . '"';
+			$action = 'action="' . get_permalink( woocommerce_get_page_id( 'shop' ) ) . '?' . $_SERVER['QUERY_STRING'] . '"';
 		endif;
-		
+	
 		?>
+		
 		<form method="post" <?php echo $action; ?> class="form-wppp-select products-per-page">
 			<?php
 			do_action( 'wppp_before_dropdown' );
