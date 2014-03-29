@@ -23,15 +23,17 @@ class wppp_dropdown extends woocommerce_products_per_page {
 		global $wp_query;
 		
 		$cat = $wp_query->get_queried_object();
-		
+
 		// Set action url if option behaviour is true
 		// Paste QUERY string after for filter and orderby support
-		if ( true == $cat->term_id && true == $this->options['behaviour'] ) :
+		if ( true == $cat->term_id && true == $this->options['behaviour'] && 'product_cat' == $cat->taxonomy ) :
 			$action = ' action="' . get_term_link( $cat->term_id, 'product_cat' ) . '?' . $_SERVER['QUERY_STRING'] . '"';
 		elseif ( true == $this->options['behaviour'] ) :
 			$action = 'action="' . get_permalink( woocommerce_get_page_id( 'shop' ) ) . '?' . $_SERVER['QUERY_STRING'] . '"';
 		endif;
-	
+
+		// Only show on product categories
+		if ( 'product_cat' == $cat->taxonomy ) :
 		?>
 		
 		<form method="post" <?php echo $action; ?> class="form-wppp-select products-per-page">
@@ -62,6 +64,7 @@ class wppp_dropdown extends woocommerce_products_per_page {
 			?>
 		</form>
 		<?php
+		endif;
 		
 	}
 	
