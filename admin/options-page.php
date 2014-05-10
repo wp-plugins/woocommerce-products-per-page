@@ -136,7 +136,7 @@ class wppp_options extends woocommerce_products_per_page {
 		
 		?>
 		<label for="behaviour">
-			<input type="checkbox" id="behaviour" name="wppp_settings[behaviour]" value="1" <?php checked( $this->options['behaviour'], 1 ); ?>>
+			<input type="checkbox" id="behaviour" name="wppp_settings[behaviour]" value="1" <?php @checked( $this->options['behaviour'], 1 ); ?>>
 			<?php _e( 'When checked and a new number of PPP is selected, the visitor will be send to the first page of the product category', 'wppp' ); ?>
 		</label>
 		<style>
