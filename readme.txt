@@ -25,6 +25,7 @@ Options like:
 ### Translations ###
 - Dutch
 - French [(whoaloic)](http://profiles.wordpress.org/whoaloic)
+- Persian [(amir_tara67)](http://profiles.wordpress.org/amir_tara67)
 
 
 == Installation ==
