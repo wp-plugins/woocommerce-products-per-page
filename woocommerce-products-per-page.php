@@ -270,7 +270,7 @@ class Woocommerce_Products_Per_Page {
 	 */
 	public function wppp_pre_get_posts( $q ) {
 
-		if ( function_exists( 'woocommerce_products_will_display' ) && woocommerce_products_will_display() ) :
+		if ( function_exists( 'woocommerce_products_will_display' ) && woocommerce_products_will_display() && $q->is_main_query() ) :
 			$q->set( 'posts_per_page', $this->wppp_loop_shop_per_page() );
 		endif;
 
