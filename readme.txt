@@ -43,7 +43,7 @@ Options like:
 
 == Changelog ==
 
-= 1.1.2 = 11/08/2014
+= 1.1.2 = 11/09/2014
 * WC 2.2 compatibility fix
 
 = 1.1.1 = 18/08/2014
