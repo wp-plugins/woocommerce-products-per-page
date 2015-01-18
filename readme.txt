@@ -4,7 +4,7 @@ Donate link: http://www.jeroensormani.com/donate/
 Tags: Products per page, woocommerce, woocommerce products, woocommerce products per page, woocommerce displayed products, woocommerce quantity products, woocommerce amount of products, woocommerce number of products, woocommerce shown products
 Requires at least: 3.6.0
 Tested up to: 4.1
-Stable tag: 1.1.3.1
+Stable tag: 1.1.4
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -26,6 +26,7 @@ Options like:
 - Dutch
 - French [(whoaloic)](http://profiles.wordpress.org/whoaloic)
 - Persian [(amir_tara67)](http://profiles.wordpress.org/amir_tara67)
+- Deutsch [(Michael)](http://profiles.wordpress.org/blogprofis/)
 
 
 == Installation ==
@@ -42,6 +43,11 @@ Options like:
 
 
 == Changelog ==
+
+= 1.1.4 - 10/01/2015 =
+
+* Fix - Dropdown hides behind add to cart notice (non-ajax button)
+* Add - German translation
 
 = 1.1.3.1 - 22/12/2014 =
 
@@ -127,3 +133,8 @@ Options like:
 = 1.0.0 =
 
 * Initial release
+
+== Upgrade Notice ==
+
+= 1.1.4 =
+Version 1.1.4 uses a different priority to position the drop down. For most people this won't affect anything, but this might be affecting your theme. Please check the drop down after updating to see if it still positioned correctly.
