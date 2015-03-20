@@ -1,10 +1,10 @@
 === WooCommerce Products Per Page ===
 Contributors: sormano
 Donate link: http://www.jeroensormani.com/donate/
-Tags: Products per page, woocommerce, woocommerce products, woocommerce products per page, woocommerce displayed products, woocommerce quantity products, woocommerce amount of products, woocommerce number of products, woocommerce shown products
+Tags: Products per page, woocommerce products, woocommerce products per page, woocommerce displayed products, woocommerce quantity products, woocommerce amount of products, woocommerce number of products, woocommerce shown products
 Requires at least: 3.6.0
 Tested up to: 4.1
-Stable tag: 1.1.4
+Stable tag: 1.1.5
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -43,6 +43,14 @@ Options like:
 
 
 == Changelog ==
+
+= 1.1.6 - 20/03/2015 =
+
+* Improvement/fix - Setting the per_page query object. Preventing/fixing notices.
+
+= 1.1.5 - 15/02/2015 =
+
+* Fix - Console notice in rare cases after WC 2.3 update
 
 = 1.1.4 - 10/01/2015 =
 
