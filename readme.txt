@@ -3,8 +3,8 @@ Contributors: sormano
 Donate link: http://www.jeroensormani.com/donate/
 Tags: Products per page, woocommerce products, woocommerce products per page, woocommerce displayed products, woocommerce quantity products, woocommerce amount of products, woocommerce number of products, woocommerce shown products
 Requires at least: 3.6.0
-Tested up to: 4.1
-Stable tag: 1.1.6
+Tested up to: 4.2
+Stable tag: 1.1.7
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -27,6 +27,8 @@ Options like:
 - French [(whoaloic)](http://profiles.wordpress.org/whoaloic)
 - Persian [(amir_tara67)](http://profiles.wordpress.org/amir_tara67)
 - Deutsch [(Michael)](http://profiles.wordpress.org/blogprofis/)
+- Danish [(Keld)](https://profiles.wordpress.org/kelderkold/)
+- Spanish
 
 
 == Installation ==
@@ -43,6 +45,12 @@ Options like:
 
 
 == Changelog ==
+
+= 1.1.7 - 25/04/2015 =
+
+* Improvement - Add url escaping
+* Add - Spanish translation
+* Add - Danish translation
 
 = 1.1.6 - 20/03/2015 =
 
