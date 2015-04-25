@@ -3,7 +3,7 @@
  * Plugin Name: Woocommerce Products Per Page
  * Plugin URI: http://www.jeroensormani.com/
  * Description: Integrate a 'products per page' dropdown on your WooCommerce website! Set-up in <strong>seconds</strong>!
- * Version: 1.1.4
+ * Version: 1.1.7
  * Author: Jeroen Sormani
  * Author URI: http://www.jeroensormani.com
 
@@ -38,7 +38,6 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
  * @version     1.1.0
  * @author      Jeroen Sormani
  */
-
 class Woocommerce_Products_Per_Page {
 
 	/**
@@ -101,7 +100,7 @@ class Woocommerce_Products_Per_Page {
 
 		// Customer number of products per page
 		add_filter( 'loop_shop_per_page', array( $this, 'wppp_loop_shop_per_page' ) );
-		add_filter( 'pre_get_posts', array( $this, 'wppp_pre_get_posts' ), 1, 50 );
+		add_action( 'woocommerce_product_query', array( $this, 'wppp_pre_get_posts' ), 2, 50 );
 
 		// Set cookie so PPP will be saved
 		add_action( 'init', array( $this, 'wppp_set_customer_session' ), 10 );
@@ -285,13 +284,11 @@ class Woocommerce_Products_Per_Page {
 	 *
 	 * @return object Query object
 	 */
-	public function wppp_pre_get_posts( $q ) {
+	public function wppp_pre_get_posts( $q, $class ) {
 
 		if ( function_exists( 'woocommerce_products_will_display' ) && woocommerce_products_will_display() && $q->is_main_query() && ! is_admin() ) :
 			$q->set( 'posts_per_page', $this->wppp_loop_shop_per_page() );
 		endif;
-
-		return $q;
 
 	}
 
@@ -355,7 +352,7 @@ class Woocommerce_Products_Per_Page {
 	 */
 	public function wppp_set_customer_session() {
 
-		if ( WC()->version > '2.1' && ! is_admin() ) :
+		if ( WC()->version > '2.1' && ( ! is_admin() || defined( 'DOING_AJAX' ) ) && ! defined( 'DOING_CRON' ) ) :
 			WC()->session->set_customer_session_cookie( true );
 		endif;
 
