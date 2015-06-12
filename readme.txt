@@ -1,10 +1,10 @@
 === WooCommerce Products Per Page ===
 Contributors: sormano
 Donate link: http://www.jeroensormani.com/donate/
-Tags: Products per page, woocommerce, woocommerce products, woocommerce products per page, woocommerce displayed products, woocommerce quantity products, woocommerce amount of products, woocommerce number of products, woocommerce shown products
-Requires at least: 3.6.0
-Tested up to: 4.1
-Stable tag: 1.1.4
+Tags: Products per page, woocommerce products, woocommerce products per page, woocommerce displayed products, woocommerce quantity products, woocommerce amount of products, woocommerce number of products, woocommerce shown products
+Requires at least: 3.7.0
+Tested up to: 4.2.2
+Stable tag: 1.2.0
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -27,6 +27,9 @@ Options like:
 - French [(whoaloic)](http://profiles.wordpress.org/whoaloic)
 - Persian [(amir_tara67)](http://profiles.wordpress.org/amir_tara67)
 - Deutsch [(Michael)](http://profiles.wordpress.org/blogprofis/)
+- Danish [(Keld)](https://profiles.wordpress.org/kelderkold/)
+- Spanish
+- Brazilian
 
 
 == Installation ==
@@ -43,6 +46,27 @@ Options like:
 
 
 == Changelog ==
+
+= 1.2.0 - 12/06/2015 =
+
+* Improvement - Structural changes to the plugin
+* NOTE - Due to the structural changes please check compatibility IF you have implemented a custom code
+* Improvement - Move the settings page to WooCommerce -> Settings -> Products -> Display
+* Add - Brazilian translation
+
+= 1.1.7 - 25/04/2015 =
+
+* Improvement - Add url escaping
+* Add - Spanish translation
+* Add - Danish translation
+
+= 1.1.6 - 20/03/2015 =
+
+* Improvement/fix - Setting the per_page query object. Preventing/fixing notices.
+
+= 1.1.5 - 15/02/2015 =
+
+* Fix - Console notice in rare cases after WC 2.3 update
 
 = 1.1.4 - 10/01/2015 =
 
